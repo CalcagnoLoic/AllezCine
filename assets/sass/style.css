@@ -1,0 +1,52 @@
+body {
+  background-color: blue;
+}
+
+#carrouselMain {
+  width: 800px;
+  height: 400px;
+  border: solid 4px #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#carrouselMain #containerMain {
+  width: 800px;
+  height: 400px;
+}
+
+#carrouselMain #containerMain .photo {
+  width: 800px;
+  height: 400px;
+  margin: 0;
+  display: inline-block;
+  background-size: cover;
+}
+
+#carrouselMain .bouton {
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  top: 150px;
+  color: white;
+  opacity: 0.4;
+}
+
+#carrouselMain #g {
+  left: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#carrouselMain #d {
+  right: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#carrouselMain #g:hover, #carrouselMain #d:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/*# sourceMappingURL=style.css.map */

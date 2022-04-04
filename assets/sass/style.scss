@@ -1,0 +1,54 @@
+body
+{
+    background-color: blue;
+}
+#carrouselMain
+{
+    width: 800px;
+    height: 400px;
+    border: solid 4px #fff;
+    position: relative;
+    overflow: hidden;
+
+    #containerMain
+    {
+        width: 800px;
+        height: 400px;
+        
+
+        .photo{
+            width: 800px;
+            height: 400px;
+            margin: 0;
+            display: inline-block;
+            background-size: cover;
+
+        }
+    }
+
+    .bouton
+    {
+        position: absolute;
+        width: 50px;
+        cursor:pointer;
+        top: 150px;
+        color: white;
+        opacity: 0.4;
+    }
+
+    #g
+    {
+        left: 10px;
+        transition: all 0.3s ease;
+    }
+
+    #d{
+        right: 10px;    
+        transition: all 0.3s ease;           
+    }
+
+    #g:hover, #d:hover{
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+}
