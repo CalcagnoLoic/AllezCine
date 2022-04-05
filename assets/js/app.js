@@ -6,11 +6,13 @@ const fetchData = async () => {
     return await data.json();
 }
 
+console.log(fetchData());
+
 let titleMovie = [];
 let synopsis = [];
 let poster = [];
 let release = [];
-const linkImg = 'https://image.tmdb.org/t/p/original'
+const linkImg = 'https://image.tmdb.org/t/p/original';
 
 let getFilmData = (arr) =>
 {
@@ -25,89 +27,89 @@ let getFilmData = (arr) =>
 }
 
 fetchData()
-    .then(carousel())
     .then(res => {        
         
-        getFilmData(res);
+        getFilmData(res);   
         
-        nbr = titleMovie.length;
         
         console.log(titleMovie.length);
 
-       
+            // Nbre d'images
+            nbr = titleMovie.length;
 
-        for(i = 1; i <= nbr; i++)
+            // Position du carrousel
+            p = 0;
+            afficherMasquer(); 
+
+            moviesCount = 0;
+            document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
+            document.getElementById('releaseTop').innerHTML = release[moviesCount];
+        
+            container = document.getElementById('containerMain');
+            buttonGauche = document.getElementById('g');
+            buttonDroit = document.getElementById('d');
+        
+            container.style.width = (400 * nbr) + "px";
+
+        for(i = 0; i <= nbr; i++)
         {
             console.log(poster[i]);
             
             div = document.createElement('img');
             div.className = "photo";
             div.src = linkImg + poster[i];
+            div.style.width = '400px';
+            div.style.height = '500px';
             container.appendChild(div);
         }
-        fleches();
-        
-        document.getElementById('titre').innerHTML = titleMovie[1];  
-    })
-    
-function carousel()
-{
-    document.body.onload = function()
-    {
-        // Nbre d'images
+            // for(i = 1; i <= nbr; i++)
+            // {
+            //     div = document.createElement('div');
+            //     div.className = "photo";
+            //     div.style.backgroundImage="url('../assets/img/dog"+i+".png')";
+            //     container.appendChild(div);
+            // }
 
-        
-        // Position du carrousel
-        p = 0;
-    
-        container = document.getElementById('containerMain');
-        buttonGauche = document.getElementById('g');
-        buttonDroit = document.getElementById('d');
-    
-        container.style.width = (800 * nbr) + "px";
-    
-        // for(i = 1; i <= nbr; i++)
-        // {
-        //     div = document.createElement('div');
-        //     div.className = "photo";
-        //     div.style.backgroundImage="url('../assets/img/dog"+i+".png')";
-        //     container.appendChild(div);
-        // }
-        afficherMasquer();
-    }
-}
+        // Codes correspondant aux fleches du carrousel 
 
-function fleches()
-{
-    g.onclick = function()
-    {
-        if((-nbr+1) < p)
+        // Fleches gauche
+        g.onclick = function()
+        {
+             if((-nbr+1) < p)
         
             p--;
+            moviesCount++;
 
-            container.style.transform = "translate("+ p * 800 + "px)";
-            container.style.transition = "all 0.5s ease";
+            container.style.transform = "translate("+ p * 400 + "px)";
+            container.style.transition = "all 0.5s ease";        
             afficherMasquer();
+            document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
+            document.getElementById('releaseTop').innerHTML = release[moviesCount];           
+        }
 
-        
-    }
 
-    d.onclick = function()
-    {
-        if( p < 0)
-        
-            p++;
+        // Feches droite
+        d.onclick = function()
+        {   
+            if( p <= 0)
+            {
+                p++;
+                moviesCount --;
 
-            container.style.transform = "translate("+ p * 800 + "px)";
-            container.style.transition = "all 0.5s ease";
-            
-        
+                container.style.transform = "translate("+ p * 400 + "px)";
+                container.style.transition = "all 0.5s ease";
+            }
+        document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
+        document.getElementById('releaseTop').innerHTML = release[moviesCount];
         afficherMasquer();
-    }
-}
-
-
-function afficherMasquer()
+        }        
+        
+        console.log(titleMovie);
+        console.log(p);
+        
+    })
+    
+    function afficherMasquer()
     {
         if(p == (-nbr+1) )
         
@@ -127,6 +129,84 @@ function afficherMasquer()
             d.style.visibility = "visible";
         
 }
+    
+// function carousel()
+// {
+//     document.body.onload = function()
+//     {
+//         // Nbre d'images
+
+        
+//         // Position du carrousel
+//         p = 0;
+    
+//         container = document.getElementById('containerMain');
+//         buttonGauche = document.getElementById('g');
+//         buttonDroit = document.getElementById('d');
+    
+//         container.style.width = (800 * nbr) + "px";
+    
+//         // for(i = 1; i <= nbr; i++)
+//         // {
+//         //     div = document.createElement('div');
+//         //     div.className = "photo";
+//         //     div.style.backgroundImage="url('../assets/img/dog"+i+".png')";
+//         //     container.appendChild(div);
+//         // }
+//         afficherMasquer();
+//     }
+// }
+
+// function fleches()
+// {
+//     g.onclick = function()
+//     {
+//         if((-nbr+1) < p)
+        
+//             p--;
+
+//             container.style.transform = "translate("+ p * 800 + "px)";
+//             container.style.transition = "all 0.5s ease";
+//             afficherMasquer();
+
+        
+//     }
+
+//     d.onclick = function()
+//     {
+//         if( p < 0)
+        
+//             p++;
+
+//             container.style.transform = "translate("+ p * 800 + "px)";
+//             container.style.transition = "all 0.5s ease";
+            
+        
+//         afficherMasquer();
+//     }
+// }
+
+
+// function afficherMasquer()
+//     {
+//         if(p == (-nbr+1) )
+        
+//             g.style.visibility = "hidden";
+        
+//         else
+        
+//             g.style.visibility = "visible";
+        
+
+//         if(p == 0 )
+        
+//             d.style.visibility = "hidden";
+        
+//         else
+        
+//             d.style.visibility = "visible";
+        
+// }
 
 
 

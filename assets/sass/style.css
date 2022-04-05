@@ -3,31 +3,48 @@ body {
 }
 
 #carrouselMain {
-  width: 800px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   border: solid 4px #fff;
   position: relative;
   overflow: hidden;
 }
 
-#carrouselMain #containerMain {
-  width: 800px;
-  height: 400px;
+#carrouselMain .containerInfos {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 5px;
+  top: 100px;
+  left: 25px;
+  z-index: 3;
 }
 
-#carrouselMain #containerMain .photo {
-  width: 800px;
-  height: 400px;
+#carrouselMain .containerInfos #titleTop {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  display: inline-block;
-  background-size: cover;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+}
+
+#carrouselMain .containerInfos #releaseTop {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  z-index: 3;
+  color: black;
+}
+
+#carrouselMain #containerMain {
+  width: 400px;
+  height: 500px;
 }
 
 #carrouselMain .bouton {
   position: absolute;
   width: 50px;
   cursor: pointer;
-  top: 150px;
+  top: 200px;
   color: white;
   opacity: 0.4;
 }
