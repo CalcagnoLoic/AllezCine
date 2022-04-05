@@ -14,6 +14,8 @@ let poster = [];
 let release = [];
 const linkImg = 'https://image.tmdb.org/t/p/original';
 
+
+// On stock les données reçu dans la réponse JSON dans des tableaux
 let getFilmData = (arr) =>
 {
     console.log(arr.results);
@@ -29,8 +31,8 @@ let getFilmData = (arr) =>
 fetchData()
     .then(res => {        
         
-        getFilmData(res);   
-        
+        // On lance la fonction getFilmData avec comme arguments la réponse JSON
+        getFilmData(res);        
         
         console.log(titleMovie.length);
 
@@ -39,8 +41,11 @@ fetchData()
 
             // Position du carrousel
             p = 0;
+
+            // Lancement de la fonction pour afficher/Masquer les fléches de naviguation
             afficherMasquer(); 
 
+            // Variable pour modifier le titre et la date de release
             moviesCount = 0;
             document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
             document.getElementById('releaseTop').innerHTML = release[moviesCount];
@@ -51,6 +56,7 @@ fetchData()
         
             container.style.width = (400 * nbr) + "px";
 
+        // Création des images
         for(i = 0; i <= nbr; i++)
         {
             console.log(poster[i]);
@@ -70,9 +76,11 @@ fetchData()
             //     container.appendChild(div);
             // }
 
-        // Codes correspondant aux fleches du carrousel 
+        
+            //////////////////////////////////////////////////////////////////////////////
+                            // Codes correspondant aux fleches du carrousel 
 
-        // Fleches gauche
+        // Fonction de la "Fléche gauche"
         g.onclick = function()
         {
              if((-nbr+1) < p)
@@ -87,8 +95,7 @@ fetchData()
             document.getElementById('releaseTop').innerHTML = release[moviesCount];           
         }
 
-
-        // Feches droite
+        // Fonction de la "fléche droite"
         d.onclick = function()
         {   
             if( p <= 0)
@@ -109,6 +116,7 @@ fetchData()
         
     })
     
+    // Fonction pour afficher/Masquer les fléches de naviguation
     function afficherMasquer()
     {
         if(p == (-nbr+1) )
