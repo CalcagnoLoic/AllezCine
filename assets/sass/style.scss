@@ -1,0 +1,42 @@
+body{background-color: grey;}
+//Style du carrousel
+#carrousel{
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+}
+#container{
+    width: 90%;
+    height: 300px;
+}
+
+//Style des flèches
+.btn{
+    position: absolute;
+    width: 20px;
+    cursor: pointer;
+    top: 140px;
+}
+#flecheGauche {
+    background-color: #fff;
+    left: 4px;
+    transition: all 0.5s ease;
+    &:hover{
+        transform:scale(1.5)
+    }
+}
+#flecheDroite {
+    background-color: #fff;
+    right: 5px;
+    transition: all 0.5s ease;
+    &:hover{
+        transform:scale(1.5)
+    }
+}
+.photo {
+    display: inline-block;
+    padding-right: 15px;
+}

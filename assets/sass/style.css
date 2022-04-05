@@ -1,0 +1,53 @@
+body {
+  background-color: grey;
+}
+
+#carrousel {
+  margin: auto;
+  width: 90%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+#container {
+  width: 90%;
+  height: 300px;
+}
+
+.btn {
+  position: absolute;
+  width: 20px;
+  cursor: pointer;
+  top: 140px;
+}
+
+#flecheGauche {
+  background-color: #fff;
+  left: 4px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#flecheGauche:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#flecheDroite {
+  background-color: #fff;
+  right: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#flecheDroite:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.photo {
+  display: inline-block;
+  padding-right: 15px;
+}
+/*# sourceMappingURL=style.css.map */
