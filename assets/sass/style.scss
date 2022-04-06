@@ -25,6 +25,7 @@
   line-height: 45px;
   h3 {
     font-weight: 700;
+    font-size: 32px;
   }
   p {
     font-weight: 400;
@@ -83,6 +84,7 @@
   padding: 90px 5px;
   background: #2c2c2c;
   text-align: center;
+  align-items: center;
 }
 
 .modal__header {
@@ -137,4 +139,86 @@
 .noscroll {
   overflow: hidden;
   height: 100%;
+}
+
+@media (max-width: 780px) {
+  .start {
+    margin: 5px 5px;
+    padding-left: 50px;
+    gap: 80px;
+  }
+  .sectionStart__left {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    h3 {
+      font-weight: 700;
+      font-size: 90%;
+    }
+  }
+  .modal {
+    width: 80%;
+    height: 80%;
+  }
+  .modal__close {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    width: 25px;
+    height: 25px;
+  }
+  .modal__subheader {
+    width: 450px;
+    margin-left: 75px;
+    white-space: pre-wrap;
+  }
+}
+@media (max-width: 560px) {
+  .start {
+    margin: 5px 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 40px;
+  }
+  .sectionStart__left {
+    margin-bottom: 56px;
+    h3 {
+      font-weight: 700;
+      font-size: 80%;
+    }
+    p {
+      font-size: 80%;
+    }
+  }
+  .sectionStart__right {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .modal {
+    width: 80%;
+    height: 80%;
+    top: 20px;
+    left: 20px;
+  }
+  .modal__input {
+    padding-left: 30px;
+    width:70%;
+    height: 70%;
+  }
+  .modal__close {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    width: 25px;
+    height: 25px;
+  }
+  .modal__subheader {
+    width: 280px;
+    margin-left: 180px;
+    white-space: pre-wrap;
+  }
 }
