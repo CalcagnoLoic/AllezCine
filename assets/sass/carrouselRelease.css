@@ -1,7 +1,7 @@
 #carrousel2 {
   margin: auto;
-  width: 90%;
-  height: 300px;
+  width: 75%;
+  height: 284px;
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   display: flex;
   gap: 15px;
   width: 90%;
-  height: 300px;
+  height: 284px;
 }
 
 .photo {

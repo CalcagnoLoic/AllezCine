@@ -75,8 +75,18 @@ dataFetch()
         const closeBtn = document.querySelector('.btn');
         const pictures = document.getElementsByClassName("photo");
 
+        
+
         for(let j = 0; j < nombreImg ; j++) {
             pictures[j].onclick = function(){
+            //j'ajoute le titre + popularité du film
+            document.querySelector(".modal-title").innerHTML = `"` + titleCarrousel2[j] + `" / Evaluation des spectateurs : ` + voteCarrousel2[j];
+            //j'ajoute le synopsis
+            document.querySelector(".modal-body").innerHTML = `"` + synopsisCarrousel2[j] + `"`
+            if (synopsisCarrousel2 === null) {
+                document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
+            }
+            //comportement du modal en fonction du click sur l'image ou sur les boutons de fermeture
             modal.style.display="block"
             close.onclick = function(){
                 modal.style.display = "none"
@@ -86,11 +96,6 @@ dataFetch()
             }}
         }
 
-        // ajout des données
-        nbrMovie = 5;
-        document.querySelector(".modal-title").innerHTML = `"` + titleCarrousel2[nbrMovie] + `" / Evaluation des spectateurs : ` + voteCarrousel2[nbrMovie];
-        document.querySelector(".modal-body").innerHTML = `"` + synopsisCarrousel2[nbrMovie] + `"`
-        
         //création de la fonction permettant d'afficher ou non les flèches
         function comportementFleche(){
             if(pos==(-nombreImg+1)) {
