@@ -6,6 +6,15 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+<p align="left">
+<img src="https://img.shields.io/badge/JS-API-yellow">
+<img src="https://img.shields.io/badge/JS-DOM-yellow">
+<img src="https://img.shields.io/badge/JS-async-yellow">
+<img src="https://img.shields.io/badge/CSS-SASS-red">
+<img src="https://img.shields.io/badge/CSS-Bootstrap-blue">
+<img src="https://img.shields.io/badge/Design-Figma-lightblue">
+</p>
+
 # But du projet 
 
 Le but de ce projet est de réaliser un site sur lequel des films sont proposés. La liste de ces films proviennent directement d'une API.
