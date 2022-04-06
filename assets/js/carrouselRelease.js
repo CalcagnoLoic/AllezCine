@@ -73,7 +73,6 @@ dataFetch()
         const modal = document.querySelector('.modal');
         const close = document.querySelector('.btn-close');
         const closeBtn = document.querySelector('.btn');
-        console.log(modal);
         const pictures = document.getElementsByClassName("photo");
 
         for(let j = 0; j < nombreImg ; j++) {
@@ -87,7 +86,10 @@ dataFetch()
             }}
         }
 
-        
+        // ajout des données
+        nbrMovie = 5;
+        document.querySelector(".modal-title").innerHTML = `"` + titleCarrousel2[nbrMovie] + `" / Evaluation des spectateurs : ` + voteCarrousel2[nbrMovie];
+        document.querySelector(".modal-body").innerHTML = `"` + synopsisCarrousel2[nbrMovie] + `"`
         
         //création de la fonction permettant d'afficher ou non les flèches
         function comportementFleche(){
