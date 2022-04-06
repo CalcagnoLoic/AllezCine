@@ -1,6 +1,5 @@
-body{background-color: grey;}
 //Style du carrousel
-#carrousel{
+#carrousel2{
     margin: auto;
     width: 90%;
     height: 300px;
@@ -8,13 +7,23 @@ body{background-color: grey;}
     overflow: hidden;
     
 }
-#container{
+#containerCarrousel2{
+    display: flex;
+    gap: 15px;
     width: 90%;
     height: 300px;
 }
 
+//Style des images
+.photo {
+    border-radius: 15px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 //Style des flèches
-.btn{
+.btn2{
     position: absolute;
     width: 20px;
     cursor: pointer;
@@ -35,8 +44,4 @@ body{background-color: grey;}
     &:hover{
         transform:scale(1.5)
     }
-}
-.photo {
-    display: inline-block;
-    padding-right: 15px;
 }

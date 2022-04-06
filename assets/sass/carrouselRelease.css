@@ -1,8 +1,4 @@
-body {
-  background-color: grey;
-}
-
-#carrousel {
+#carrousel2 {
   margin: auto;
   width: 90%;
   height: 300px;
@@ -10,12 +6,24 @@ body {
   overflow: hidden;
 }
 
-#container {
+#containerCarrousel2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
   width: 90%;
   height: 300px;
 }
 
-.btn {
+.photo {
+  border-radius: 15px;
+}
+
+.photo:hover {
+  cursor: pointer;
+}
+
+.btn2 {
   position: absolute;
   width: 20px;
   cursor: pointer;
@@ -45,9 +53,4 @@ body {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
-
-.photo {
-  display: inline-block;
-  padding-right: 15px;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=carrouselRelease.css.map */
