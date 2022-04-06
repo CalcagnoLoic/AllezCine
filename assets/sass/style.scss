@@ -159,10 +159,12 @@
   .modal {
     width: 80%;
     height: 80%;
+    top: 20px;
+    left: 20px;
   }
   .modal__close {
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: 70px;
     width: 25px;
     height: 25px;
@@ -211,7 +213,7 @@
   }
   .modal__close {
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 200px;
     width: 25px;
     height: 25px;
