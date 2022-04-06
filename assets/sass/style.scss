@@ -10,16 +10,20 @@ body
     border: solid 4px #fff;
     position: relative;
     overflow: hidden;
+    border-radius: 15px;
 
     .containerInfos
     {
+        width: 200px;
+        text-align: center;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 5px;
         padding: 5px;
-        top: 100px;
-        left: 25px;
+        top: 223px;
+        left: 95px;
         z-index: 3;
+        border: solid black;
 
 
         #titleTop
@@ -28,7 +32,8 @@ body
             margin: 0;            
             font-size: 20px;
             font-weight: bolder;
-            
+            max-width: 220px;
+            padding-bottom: 5px;
             color: black;
         }
         #releaseTop
@@ -39,9 +44,7 @@ body
             color: black;
         }
 
-    }
-
-    
+    }  
 
     #containerMain
     {

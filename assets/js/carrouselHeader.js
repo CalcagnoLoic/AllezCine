@@ -1,7 +1,7 @@
 const api_key = '94d3b735c0a1582c1b3cb985eee421a1';
 
 const fetchData = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=94d3b735c0a1582c1b3cb985eee421a1&language=en-US&page=1', {cache: "no-cache"});
+    const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=94d3b735c0a1582c1b3cb985eee421a1&language=fr-FR&page=1', {cache: "no-cache"});
     return await data.json();
 }
 
@@ -9,6 +9,7 @@ let titleMovie = [];
 let synopsis = [];
 let poster = [];
 let release = [];
+let dateCut = [];
 const linkImg = 'https://image.tmdb.org/t/p/original';
 
 // On stock les données reçu dans la réponse JSON dans des tableaux
@@ -23,12 +24,33 @@ let getFilmData = (arr) =>
         })
 }
 
+// Transforme la date anglaise en date française
+function changeDateFr()
+{
+    for(let i = 0; i < release.length; i++)
+        {
+            let dateSplit = release[i].split('-');
+            dateCut.push(dateSplit);
+        }
+}
+
+// Function pour changer les éléments du carrousel (titre et date de sortie)
+function changeInfos()
+{
+    document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
+    document.getElementById('releaseTop').innerHTML = dateCut[moviesCount][2] + '-' + dateCut[moviesCount][1] + '-' + dateCut[moviesCount][0];  
+}
+
 fetchData()
-    .then(res => {        
+    .then(res => {           
         
         // On lance la fonction getFilmData avec comme arguments la réponse JSON
-        getFilmData(res);        
+        getFilmData(res); 
+
+        // On lance la fonction changeDateFr pour transformer les dates
+        changeDateFr();
         
+        console.log(dateCut);
             // Nbre d'images
             nbr = titleMovie.length;
 
@@ -40,8 +62,9 @@ fetchData()
 
             // Variable pour modifier le titre et la date de release
             moviesCount = 0;
-            document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
-            document.getElementById('releaseTop').innerHTML = release[moviesCount];
+
+            // On lance la fonction changeInfos() pour modifier le titre et la date de sortie
+            changeInfos()
         
             container = document.getElementById('containerMain');
             buttonGauche = document.getElementById('g');
@@ -50,7 +73,7 @@ fetchData()
             container.style.width = (400 * nbr) + "px";
 
         // Création des images
-        for(i = 0; i <= nbr; i++)
+        for(i = 0; i < nbr; i++)
         {
             div = document.createElement('img');
             div.className = "photo";
@@ -66,35 +89,33 @@ fetchData()
         // Fonction de la "Fléche gauche"
         g.onclick = function()
         {
-             if((-nbr+1) < p)
-             {
-                 p--;
-                 moviesCount++;
-                 
-                 container.style.transform = "translate("+ p * 400 + "px)";
-                 container.style.transition = "all 0.5s ease";   
-                }
+            if((-nbr+1) < p)
+            {
+                p--;
+                moviesCount++;                
+            }
                 
+            container.style.transform = "translate("+ p * 400 + "px)";
+            container.style.transition = "all 0.5s ease";   
+
             afficherMasquer();
-            document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
-            document.getElementById('releaseTop').innerHTML = release[moviesCount];           
+            changeInfos()          
         }
 
         // Fonction de la "fléche droite"
         d.onclick = function()
         {   
-            if( p <= 0)
+            if( p < 0)
             {
                 p++;
                 moviesCount --;
-
-                container.style.transform = "translate("+ p * 400 + "px)";
-                container.style.transition = "all 0.5s ease";
             }
 
+            container.style.transform = "translate("+ p * 400 + "px)";
+            container.style.transition = "all 0.5s ease";
+
             afficherMasquer();
-            document.getElementById('titleTop').innerHTML = titleMovie[moviesCount];  
-            document.getElementById('releaseTop').innerHTML = release[moviesCount];
+            changeInfos() 
         }        
     })
     
