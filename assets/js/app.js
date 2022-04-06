@@ -6,7 +6,6 @@ btnStart.addEventListener('click', () => {
 });
 
 const modalWindow = document.querySelector('.modal');
-// const btnModals = document.querySelectorAll('.modal__button');
 const modalClose = document.querySelector('.modal__close');
 const body = document.querySelector('body');
 
@@ -14,8 +13,6 @@ btnContact.addEventListener('click', () => {
       modalWindow.style.display = 'flex';
       body.classList.add('noscroll');
     })
-
-
 
 modalWindow.addEventListener('click', (e) => {
   const isModal = e.target.closest('.modal__inner');
