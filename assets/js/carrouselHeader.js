@@ -12,6 +12,8 @@ let release = [];
 let dateCut = [];
 const linkImg = 'https://image.tmdb.org/t/p/original';
 
+console.log(fetchData());
+
 // On stock les données reçu dans la réponse JSON dans des tableaux
 let getFilmData = (arr) =>
 {
@@ -19,7 +21,7 @@ let getFilmData = (arr) =>
         {
            titleMovie.push(elem.title);
            synopsis.push(elem.overview);
-           poster.push(elem.poster_path);
+           poster.push(elem.backdrop_path);
            release.push(elem.release_date); 
         })
 }
@@ -70,7 +72,7 @@ fetchData()
             buttonGauche = document.getElementById('g');
             buttonDroit = document.getElementById('d');
         
-            container.style.width = (400 * nbr) + "px";
+            container.style.width = (627 * nbr) + "px";
 
         // Création des images
         for(i = 0; i < nbr; i++)
@@ -78,8 +80,12 @@ fetchData()
             div = document.createElement('img');
             div.className = "photo";
             div.src = linkImg + poster[i];
-            div.style.width = '400px';
-            div.style.height = '500px';
+            if(div.src == 'https://image.tmdb.org/t/p/originalnull')
+            {
+                div.src = '../assets/img/ugly_doggy.png'
+            }
+            div.style.width = '627px';
+            div.style.height = '290px';
             container.appendChild(div);
         }
 
@@ -95,7 +101,7 @@ fetchData()
                 moviesCount++;                
             }
                 
-            container.style.transform = "translate("+ p * 400 + "px)";
+            container.style.transform = "translate("+ p * 627 + "px)";
             container.style.transition = "all 0.5s ease";   
 
             afficherMasquer();
@@ -111,7 +117,7 @@ fetchData()
                 moviesCount --;
             }
 
-            container.style.transform = "translate("+ p * 400 + "px)";
+            container.style.transform = "translate("+ p * 627 + "px)";
             container.style.transition = "all 0.5s ease";
 
             afficherMasquer();
