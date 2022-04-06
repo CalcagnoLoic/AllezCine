@@ -1,27 +1,25 @@
-const api_key = '94d3b735c0a1582c1b3cb985eee421a1';
-
-
-const fetchData = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=94d3b735c0a1582c1b3cb985eee421a1&language=en-US&page=1', {cache: "no-cache"});
+const dataFetch = async () => {
+    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=94d3b735c0a1582c1b3cb985eee421a1&primary_release_year=2022%27')
     return await data.json();
 }
-
-let titleMovie = [];
-let synopsis = [];
+dataFetch()
+.then(res =>
+    {
+        getData(res);
+    })
 let poster = [];
-let release = [];
-//const linkImg = 'https://image.tmdb.org/t/p/original'
+let title = [];
+let vote = [];
+let synopsis = [];
 
-let getFilmData = (arr) =>
-{
-    console.log(arr.results);
-    return arr.results.forEach(elem => 
-        {
-           titleMovie.push(elem.title);
-           synopsis.push(elem.overview);
-           poster.push(elem.poster_path);
-           release.push(elem.release_date); 
-        })
+//je remplies des sous-tableaux avec les données que je récupère
+function getData(arr){
+    return arr.results.forEach(el => {
+        poster.push(el.poster_path);
+        title.push(el.title);
+        vote.push(el.vote_average);
+        synopsis.push(el.overview);
+    });
+    
 }
-fetchData()
-console.log(fetchData())
+console.log(vote);
