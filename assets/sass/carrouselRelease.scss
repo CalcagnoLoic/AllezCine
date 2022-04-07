@@ -1,0 +1,45 @@
+////////////////////////////////////Style associé au 2e carrousel
+//Style du carrousel
+#carrousel2{
+    margin: auto;
+    width: 75%;
+    height: 284px;
+    position: relative;
+    overflow: hidden;
+}
+#containerCarrousel2{
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    height: 284px;
+}
+
+//Style des images
+.photo {
+    border-radius: 15px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//Style des flèches
+.btn2{
+    position: absolute;
+    width: 20px;
+    cursor: pointer;
+    top: 140px;
+}
+#flecheGauche {
+    left: 8px;
+    transition: all 0.5s ease;
+    &:hover{
+        transform:scale(1.8)
+    }
+}
+#flecheDroite {
+    right: 8px;
+    transition: all 0.5s ease;
+    &:hover{
+        transform:scale(1.8)
+    }
+}

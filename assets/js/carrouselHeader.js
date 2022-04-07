@@ -81,6 +81,12 @@ fetchData()
         
             container.style.width = (627 * nbr) + "px";
 
+            window.onclick = function(e){
+                if(e.target == modal){
+                    modal.style.display = "none"
+                }
+            }
+            
         // Création des images
         for(i = 0; i < nbr; i++)
         {

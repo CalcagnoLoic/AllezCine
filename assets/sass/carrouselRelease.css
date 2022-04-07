@@ -1,0 +1,54 @@
+#carrousel2 {
+  margin: auto;
+  width: 75%;
+  height: 284px;
+  position: relative;
+  overflow: hidden;
+}
+
+#containerCarrousel2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  width: 90%;
+  height: 284px;
+}
+
+.photo {
+  border-radius: 15px;
+}
+
+.photo:hover {
+  cursor: pointer;
+}
+
+.btn2 {
+  position: absolute;
+  width: 20px;
+  cursor: pointer;
+  top: 140px;
+}
+
+#flecheGauche {
+  left: 8px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#flecheGauche:hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+#flecheDroite {
+  right: 8px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#flecheDroite:hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+/*# sourceMappingURL=carrouselRelease.css.map */
