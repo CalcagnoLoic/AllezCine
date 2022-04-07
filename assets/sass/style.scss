@@ -48,13 +48,17 @@
             z-index: 3;
             color: white;
         }
-
     }  
 
     #containerMain
     {
         width: 627px;
         height: 290px;    
+
+        .photo:hover
+        {
+            cursor: pointer;
+        }
     }
 
     .bouton

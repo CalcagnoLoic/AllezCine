@@ -52,6 +52,10 @@
   height: 290px;
 }
 
+#carrouselMain #containerMain .photo:hover {
+  cursor: pointer;
+}
+
 #carrouselMain .bouton {
   position: absolute;
   width: 50px;

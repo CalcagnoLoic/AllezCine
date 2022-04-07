@@ -1,5 +1,10 @@
 const api_key = '94d3b735c0a1582c1b3cb985eee421a1';
 
+let carrouselWidth = document.getElementById("containerMain").offsetWidth; 
+let carrouselHeight = document.getElementById("containerMain").offsetHeight; 
+
+console.log(carrouselWidth);
+
 const fetchData = async () => {
     const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=94d3b735c0a1582c1b3cb985eee421a1&language=fr-FR&page=1', {cache: "no-cache"});
     return await data.json();
@@ -10,6 +15,7 @@ let synopsis = [];
 let poster = [];
 let release = [];
 let dateCut = [];
+let voteUsers = [];
 const linkImg = 'https://image.tmdb.org/t/p/original';
 
 console.log(fetchData());
@@ -23,6 +29,7 @@ let getFilmData = (arr) =>
            synopsis.push(elem.overview);
            poster.push(elem.backdrop_path);
            release.push(elem.release_date); 
+           voteUsers.push(elem.vote_average);
         })
 }
 
@@ -88,6 +95,36 @@ fetchData()
             div.style.height = '290px';
             container.appendChild(div);
         }
+            //////////////////////////////////////////////////////////////////////////////
+                            // Codes correspondant au modal 
+
+            const modal = document.querySelector('.modal');
+            const close = document.querySelector('.btn-close');
+            const closeBtn = document.querySelector('.btn');
+            const pictures = document.getElementsByClassName("photo");
+    
+        
+            for(let j = 0; j < nbr ; j++) {
+
+                pictures[j].onclick = function(){
+
+                //j'ajoute le titre + popularité du film
+                document.querySelector(".modal-title").innerHTML = `"` + titleMovie[j] + `" / Evaluation des spectateurs : ` + voteUsers[j];
+
+                //j'ajoute le synopsis
+                document.querySelector(".modal-body").innerHTML = `"` + synopsis[j] + `"`
+                if (synopsis[j] === "") {
+                    document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
+                }
+                //comportement du modal en fonction du click sur l'image ou sur les boutons de fermeture
+                modal.style.display="block"
+                close.onclick = function(){
+                    modal.style.display = "none"
+                }
+                closeBtn.onclick = function(){
+                    modal.style.display = "none"
+                }}
+            }
 
             //////////////////////////////////////////////////////////////////////////////
                             // Codes correspondant aux fleches du carrousel 
@@ -101,7 +138,7 @@ fetchData()
                 moviesCount++;                
             }
                 
-            container.style.transform = "translate("+ p * 627 + "px)";
+            container.style.transform = "translate("+ p * carrouselWidth + "px)";
             container.style.transition = "all 0.5s ease";   
 
             afficherMasquer();
@@ -117,7 +154,7 @@ fetchData()
                 moviesCount --;
             }
 
-            container.style.transform = "translate("+ p * 627 + "px)";
+            container.style.transform = "translate("+ p * carrouselWidth + "px)";
             container.style.transition = "all 0.5s ease";
 
             afficherMasquer();
