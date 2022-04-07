@@ -21,13 +21,13 @@ Le but de ce projet est de réaliser un site sur lequel des films sont proposés
 
 Ce projet de groupe, d'une durée de 5 jours, est réalisé en collaboration avec [@Amoryne](https://github.com/Amoryne), [@Elena](https://github.com/TozurElena) et [@Nicolas](https://github.com/Kurner)
 
-![Mettre une photo du site]()
+[Mettre une photo du site]()
 
 # Technologies mises en place
 
 Afin de mener à bien ce projet, différentes technologies ont été utilisées. 
 
-* Utilisation d'un design via une planche Figma
+* Utilisation d'un design via une planche [Figma](https://www.figma.com/file/sDT58wuez4oWbfw6rEN8Yp/Untitled)
 
 * Consolidation des technologies front-end, à savoir HTML5 et SASS
 
