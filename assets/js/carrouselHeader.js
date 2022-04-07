@@ -108,22 +108,23 @@ fetchData()
 
                 pictures[j].onclick = function(){
 
-                //j'ajoute le titre + popularité du film
-                document.querySelector(".modal-title").innerHTML = `"` + titleMovie[j] + `" / Evaluation des spectateurs : ` + voteUsers[j];
+                    // Ajouts du titre et la popularité du film
+                    document.querySelector(".modal-title").innerHTML = `"` + titleMovie[j] + `" | Note : ` + voteUsers[j];
 
-                //j'ajoute le synopsis
-                document.querySelector(".modal-body").innerHTML = `"` + synopsis[j] + `"`
-                if (synopsis[j] === "") {
-                    document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
-                }
-                //comportement du modal en fonction du click sur l'image ou sur les boutons de fermeture
-                modal.style.display="block"
-                close.onclick = function(){
-                    modal.style.display = "none"
-                }
-                closeBtn.onclick = function(){
-                    modal.style.display = "none"
-                }}
+                    // Ajouts du synopsis
+                    document.querySelector(".modal-body").innerHTML = `"` + synopsis[j] + `"`
+                    if (synopsis[j] === "") {
+                        document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
+                    }
+                    
+                    // Affichage du modal
+                    modal.style.display="block"
+                    close.onclick = function(){
+                        modal.style.display = "none"
+                    }
+                    closeBtn.onclick = function(){
+                        modal.style.display = "none"
+                    }}
             }
 
             //////////////////////////////////////////////////////////////////////////////
