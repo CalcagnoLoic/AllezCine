@@ -17,39 +17,80 @@
   <title>AllezCine</title>
 </head>
 <body>
-
-  <section class="start">
-    <div class="sectionStart__left">
-      <h3>Ready to get started?</h3>
-      <p>Sign up or contact us</p>
-    </div>
-    <div class="sectionStart__right">
-      <button class="btnStartFree">Start free trial</button>
-      <button class="btnContact">Contact Us</button>
-    </div>
-  </section>
-
-  <form action="#" class="modalContact">
-    <div class="modal__inner">
-      <div class="modal__close">
-        <img src="assets/img/cross.svg" alt="Close">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">AllezCiné</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#"><img src="assets/img/home.svg" alt="Home"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="assets/img/film.svg" alt="Film"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="assets/img/etoile.svg" alt="Etoile"></a>
+            </li>
+            
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Chercher un film" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav  mb-2 mb-lg-0">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="assets/img/compte.svg" alt="Compte"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="assets/img/parametrs.svg" alt="Parametrs"></a>
+            </li>
+          
+          </ul>
+        </div>
       </div>
-      <h3 class="modal__header">Contact Us</h3>
-      <div class="modal__subheader">Do you have any questions?  Please do not hesitate to contact us directly</div>
-      <div class="modal__elements">
-        <div class="modal__item">
-          <input type="text" class="modal__input" placeholder="Your name">
-        </div>
-        <div class="modal__item">
-          <input type="tel" class="modal__input" placeholder="Your telephone">
-        </div>
-        <div class="modal__item">
-          <input type="email" class="modal__input" placeholder="E-mail">
-        </div>
+    </nav>
+  </header>
+  <main>
+    <section class="start">
+      <div class="sectionStart__left">
+        <h3>Ready to get started?</h3>
+        <p>Sign up or contact us</p>
       </div>
-      <button type="submit" class="btnSend">Send</button>
-    </div>
-  </form>
+      <div class="sectionStart__right">
+        <button class="btnStartFree">Start free trial</button>
+        <button class="btnContact">Contact Us</button>
+      </div>
+    </section>
+    
+    <form action="#" class="modalContact">
+      <div class="modal__inner">
+        <div class="modal__close">
+          <img src="assets/img/cross.svg" alt="Close">
+        </div>
+        <h3 class="modal__header">Contact Us</h3>
+        <div class="modal__subheader">Do you have any questions? Please do not hesitate to contact us directly</div>
+        <div class="modal__elements">
+          <div class="modal__item">
+            <input type="text" class="modal__input" placeholder="Your name">
+          </div>
+          <div class="modal__item">
+            <input type="tel" class="modal__input" placeholder="Your telephone">
+          </div>
+          <div class="modal__item">
+            <input type="email" class="modal__input" placeholder="E-mail">
+          </div>
+        </div>
+        <button type="submit" class="btnSend">Send</button>
+      </div>
+    </form>
+  </main>
+  
   
 </body>
 </html>
