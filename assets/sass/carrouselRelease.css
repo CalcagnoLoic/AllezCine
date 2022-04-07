@@ -4,6 +4,8 @@
   height: 284px;
   position: relative;
   overflow: hidden;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 #containerCarrousel2 {
