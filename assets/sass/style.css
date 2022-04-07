@@ -6,11 +6,11 @@
 }
 
 .start {
-  margin: 56px 71px 58px 84px;
+  margin: 56px 71px;
   background: #E89D9D;
   padding-top: 75px;
   padding-bottom: 75px;
-  padding-left: 100px;
+  padding-left: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (324px)[auto-fit];
@@ -69,7 +69,7 @@
   background-color: #E89D9D;
 }
 
-.modal {
+.modalContact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,7 +187,7 @@
     font-weight: 700;
     font-size: 90%;
   }
-  .modal {
+  .modalContact {
     width: 80%;
     height: 80%;
     top: 20px;
@@ -238,7 +238,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  .modal {
+  .modalContact {
     width: 80%;
     height: 80%;
     top: 20px;

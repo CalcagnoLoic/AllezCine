@@ -1,15 +1,15 @@
-%btn {
+%btnE {
   width: 205px;
   height: 48px;
   padding: 10px 20px;
   border-radius: 5px;
 }
 .start {
-  margin: 56px 71px 58px 84px;
+  margin: 56px 71px;
   background: #E89D9D;
   padding-top: 75px;
   padding-bottom: 75px;
-  padding-left: 100px;
+  padding-left: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 324px);
   /* pour adaptation*/
@@ -41,17 +41,17 @@
   line-height: 21px;
 }
 .btnStartFree {
-  @extend %btn;
+  @extend %btnE;
   background-color: black;
   color: #fff;
 }
 .btnContact {
-  @extend %btn;
+  @extend %btnE;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: #E89D9D;
 }
 
-.modal {
+.modalContact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +71,7 @@
   display: none;
 }
 .btnSend {
-  @extend %btn;
+  @extend %btnE;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: #E89D9D;
   font-size: 20px;
@@ -156,7 +156,7 @@
       font-size: 90%;
     }
   }
-  .modal {
+  .modalContact {
     width: 80%;
     height: 80%;
     top: 20px;
@@ -200,7 +200,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  .modal {
+  .modalContact {
     width: 80%;
     height: 80%;
     top: 20px;

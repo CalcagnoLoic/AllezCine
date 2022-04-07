@@ -5,7 +5,7 @@ btnStart.addEventListener('click', () => {
   window.open('https://www.themoviedb.org/movie', '_target');
 });
 
-const modalWindow = document.querySelector('.modal');
+const modalWindow = document.querySelector('.modalContact');
 const modalClose = document.querySelector('.modal__close');
 const body = document.querySelector('body');
 
