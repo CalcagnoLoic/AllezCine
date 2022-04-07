@@ -116,34 +116,41 @@ dataFetch()
 
         for(let j = 0; j < nombreImg ; j++) {
             pictures[j].onclick = function(){
-            /**====================================================
-             * Ajout du titre et de la popularité du film
-             * ===================================================
-             */
-            document.querySelector(".modal-title").innerHTML = `"` + titleCarrousel2[j] + `" / Evaluation des spectateurs : ` + voteCarrousel2[j];
+                /**====================================================
+                 * Ajout du titre et de la popularité du film
+                 * ===================================================
+                 */
+                document.querySelector(".modal-title").innerHTML = `"` + titleCarrousel2[j] + `" / Evaluation des spectateurs : ` + voteCarrousel2[j];
 
-            /**====================================================
-             * Ajout du synopsis de chaque film
-             * ===================================================
-             */
-            //j'ajoute le synopsis
-            document.querySelector(".modal-body").innerHTML = `"` + synopsisCarrousel2[j] + `"`
-            if (synopsisCarrousel2[j] === "") {
-                document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
-            }
+                /**====================================================
+                 * Ajout du synopsis de chaque film
+                 * ===================================================
+                 */
+                //j'ajoute le synopsis
+                document.querySelector(".modal-body").innerHTML = `"` + synopsisCarrousel2[j] + `"`
+                if (synopsisCarrousel2[j] === "") {
+                    document.querySelector(".modal-body").innerHTML = "Synopsis à venir..."
+                }
 
-            /**====================================================
-             * Comportement de la fenêtre modal en fonction du 
-             * click sur l'image ou sur le bouton de fermeture
-             * ===================================================
-             */
-            modal.style.display="block"
-            close.onclick = function(){
-                modal.style.display = "none"
+                /**====================================================
+                 * Comportement de la fenêtre modal en fonction du 
+                 * click sur l'image ou sur le bouton de fermeture
+                 * ===================================================
+                 */
+            
+                modal.style.display="block"
+                close.onclick = function(){
+                    modal.style.display = "none"
+                }
+                closeBtn.onclick = function(){
+                    modal.style.display = "none"
+                }
+                window.onclick = function(e){
+                    if(e.target == modal){
+                        modal.style.display = "none"
+                    }
+                }
             }
-            closeBtn.onclick = function(){
-                modal.style.display = "none"
-            }}
         }
 
         /**===========================================================
