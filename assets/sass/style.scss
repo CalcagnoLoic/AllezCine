@@ -1,3 +1,9 @@
+body{
+  background-color: black;
+  //background-image:url("../img/fond-cine.jpg");
+
+}
+
 #carrouselMain
 {
     margin: auto;
@@ -7,6 +13,7 @@
     overflow: hidden;
     border-radius: 15px;
     margin-top: 80px;
+    margin-bottom: 200px;
 
     .containerInfos
     {
@@ -55,6 +62,7 @@
     {
         width: 627px;
         height: 290px;    
+        margin-bottom: 80px;
 
         .photo:hover
         {
@@ -375,4 +383,22 @@ max-width:100%;
     }
   
     
+}
+// .photos-affiche{
+//   filter:opacity()
+// }
+#carrousel2{
+  border:1px solid blue;
+  z-index:1;
+}
+#container-carrousel2{
+  border:1px solid red;
+  width:100%;
+  height:500px;
+  display:flex;
+  background-image:url("listes-10-clichés-affiches-film.jpg");
+  opacity:0.5;
+  z-index:0;
+  
+  
 }
