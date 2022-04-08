@@ -1,21 +1,23 @@
+@charset "UTF-8";
 body {
   background-color: black;
-  position: relative;
 }
 
 body .carrouselTop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("../img/fond-cine.jpg");
+  background-image: url("../img/fond-cine2.jpg");
   background-size: cover;
   background-size: 91%;
   background-repeat: no-repeat;
   background-position: 50% 68%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #carrouselMain {
-  margin: auto;
   width: 627px;
   height: 290px;
   position: relative;
@@ -438,5 +440,22 @@ body .carrouselTop {
 #carousel .carousel-inner {
   max-height: 100%;
   max-width: 100%;
+}
+
+#carrousel2 {
+  border: 1px solid blue;
+  z-index: 1;
+}
+
+#container-carrousel2 {
+  border: 1px solid red;
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("listes-10-clichés-affiches-film.jpg");
+  opacity: 0.5;
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */
