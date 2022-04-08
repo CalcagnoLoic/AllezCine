@@ -1,5 +1,7 @@
 body{
-  background-color: blue;
+  background-color: black;
+  //background-image:url("../img/fond-cine.jpg");
+
 }
 
 #carrouselMain
@@ -378,4 +380,22 @@ max-width:100%;
     }
   
     
+}
+// .photos-affiche{
+//   filter:opacity()
+// }
+#carrousel2{
+  border:1px solid blue;
+  z-index:1;
+}
+#container-carrousel2{
+  border:1px solid red;
+  width:100%;
+  height:500px;
+  display:flex;
+  background-image:url("listes-10-clichés-affiches-film.jpg");
+  opacity:0.5;
+  z-index:0;
+  
+  
 }
