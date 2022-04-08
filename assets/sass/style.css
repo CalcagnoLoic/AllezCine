@@ -1,5 +1,17 @@
 body {
-  background-color: blue;
+  background-color: black;
+  position: relative;
+}
+
+body .carrouselTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../img/fond-cine.jpg");
+  background-size: cover;
+  background-size: 91%;
+  background-repeat: no-repeat;
+  background-position: 50% 68%;
 }
 
 #carrouselMain {
