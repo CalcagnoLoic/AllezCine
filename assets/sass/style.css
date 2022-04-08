@@ -91,11 +91,14 @@
   height: 48px;
   padding: 10px 20px;
   border-radius: 5px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .start {
-  margin: 56px 71px;
-  background: #E89D9D;
+  margin: 56px 120px;
+  background: #DB1A1A;
+  color: #fff;
   padding-top: 75px;
   padding-bottom: 75px;
   padding-left: 50px;
@@ -108,7 +111,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   gap: 260px 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .sectionStart__left {
@@ -147,14 +150,13 @@
 }
 
 .btnStartFree {
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  color: #DB1A1A;
 }
 
 .btnContact {
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: #E89D9D;
+  color: #fff;
+  background-color: #DB1A1A;
 }
 
 .modalContact {
