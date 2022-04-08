@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+
+
 body{
   background-color: black;
   //background-image:url("../img/fond-cine.jpg");
@@ -105,11 +110,10 @@ body{
   border-radius: 5px;
 }
 .start {
-  margin: 56px 71px;
-  background: #E89D9D;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  padding-left: 50px;
+  margin:120px 71px;
+  background: #DB1A1A;
+  color:white;
+ padding:40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 324px);
   /* pour adaptation*/
@@ -125,7 +129,7 @@ body{
   line-height: 45px;
   h3 {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
   }
   p {
     font-weight: 400;
@@ -142,13 +146,16 @@ body{
 }
 .btnStartFree {
   @extend %btnE;
-  background-color: black;
-  color: #fff;
+  background-color: white;
+  color: #DB1A1A;
+  
+
 }
 .btnContact {
   @extend %btnE;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: #E89D9D;
+  background-color: #DB1A1A;
+  color:white;
 }
 
 .modalContact {
@@ -331,17 +338,19 @@ body{
     justify-content: space-around;
     margin-top: 120px;
     padding:50px;
-    background-color:#FF0000A6;
+    background-color:#151518 ;
+    opacity:0.7;
     
     
        ul{
            list-style: none;
-           color:white;
+           color:rgb(231, 22, 22);
            .sous-titre-footer{
                font-size: 15px;
                font-family: sans-serif;
                padding-bottom: 20px;
                font-weight: bolder;
+              
            }
         a{
             text-decoration: none;
@@ -385,17 +394,68 @@ max-width:100%;
 //   filter:opacity()
 // }
 #carrousel2{
-  border:1px solid blue;
-  z-index:1;
+  
+
 }
 #container-carrousel2{
-  border:1px solid red;
   width:100%;
   height:500px;
   display:flex;
-  background-image:url("listes-10-clichés-affiches-film.jpg");
-  opacity:0.5;
-  z-index:0;
+  background-image:url("fond2.jpg");
+
+}
+
+.modal-content{
+  background-color:   #303135 ;
+  border:2px solid white;
+  border-radius:20px;
+  color:white;
+}
+.modal-title{
+  color:#DB1A1A
+}
+
+.titre-2-release{
+  display:flex;
+  justify-content:space-between;
+  //align-items: center;
+  border:1px solid blue;
+  height:400px;
   
+ 
+  .titre-2-release-text{
+font-size:100px;
+padding-right:30px;
+text-align: right;
+letter-spacing: 5px;
+line-height: 1.2;
+color:white;
+border:1px solid red;
+display:flex;
+align-items: flex-end;
+font-family: 'Inter',sans-serif;
+
+  }
+}
+
+.container-button-release{
+  border:1px solid green;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width:220px;
+  height:200px; 
+   margin-left:40%;
+   margin-top:300px;
+  .button-release{
+    height:60px;
+    width:100%;
+    background-color:#DB1A1A;
+    border:none;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 3px;
   
+    
+  }
 }

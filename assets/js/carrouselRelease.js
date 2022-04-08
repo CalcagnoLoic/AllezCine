@@ -171,3 +171,18 @@ dataFetch()
             }
         }
     })
+
+    //-------------------------------------------
+  
+
+    // let dates_release = [];
+   
+    
+    
+    // getData = (arr) => {
+    //     return arr.dates.forEach(el => {
+    //         dates_release.push(el.maximum);
+            
+    //     });
+    // }
+    
