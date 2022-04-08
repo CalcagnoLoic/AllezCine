@@ -54,7 +54,7 @@ fetchData()
     .then(res => {           
         
         // On lance la fonction getFilmData avec comme arguments la réponse JSON
-        getFilmData(res); 
+        getFilmData(res);
 
         // On lance la fonction changeDateFr pour transformer les dates
         changeDateFr();
@@ -78,7 +78,6 @@ fetchData()
             container = document.getElementById('containerMain');
             buttonGauche = document.getElementById('g');
             buttonDroit = document.getElementById('d');
-        
             container.style.width = (627 * nbr) + "px";
 
             window.onclick = function(e){

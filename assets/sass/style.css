@@ -3,8 +3,21 @@ body {
   background-color: black;
 }
 
+body .carrouselTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../img/fond-cine2.jpg");
+  background-size: cover;
+  background-size: 91%;
+  background-repeat: no-repeat;
+  background-position: 50% 68%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #carrouselMain {
-  margin: auto;
   width: 627px;
   height: 290px;
   position: relative;
