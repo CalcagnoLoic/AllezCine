@@ -1,3 +1,7 @@
+body{
+  background-color: blue;
+}
+
 #carrouselMain
 {
     margin: auto;
@@ -7,6 +11,7 @@
     overflow: hidden;
     border-radius: 15px;
     margin-top: 80px;
+    margin-bottom: 200px;
 
     .containerInfos
     {
@@ -55,6 +60,7 @@
     {
         width: 627px;
         height: 290px;    
+        margin-bottom: 80px;
 
         .photo:hover
         {
