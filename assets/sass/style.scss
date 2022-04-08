@@ -393,23 +393,26 @@ max-width:100%;
 // .photos-affiche{
 //   filter:opacity()
 // }
-#carrousel2{
-  
 
-}
 #container-carrousel2{
   width:100%;
   height:500px;
   display:flex;
   background-image:url("fond2.jpg");
+ 
 
 }
 
 .modal-content{
-  background-color:   #303135 ;
+  background-color:   #1e1f20 ;
   border:2px solid white;
   border-radius:20px;
   color:white;
+  opacity:0.9;
+  &:hover{
+    opacity:1;
+    transition: opacity 330ms ease-in-out;
+  }
 }
 .modal-title{
   color:#DB1A1A
@@ -457,5 +460,11 @@ font-family: 'Inter',sans-serif;
     letter-spacing: 3px;
   
     
+  }
+}
+.navbar{
+  background-color: black;
+  img{
+    width:20px;
   }
 }

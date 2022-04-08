@@ -440,10 +440,17 @@ body {
 }
 
 .modal-content {
-  background-color: #303135;
+  background-color: #1e1f20;
   border: 2px solid white;
   border-radius: 20px;
   color: white;
+  opacity: 0.9;
+}
+
+.modal-content:hover {
+  opacity: 1;
+  -webkit-transition: opacity 330ms ease-in-out;
+  transition: opacity 330ms ease-in-out;
 }
 
 .modal-title {
@@ -503,5 +510,13 @@ body {
   color: white;
   font-weight: bold;
   letter-spacing: 3px;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar img {
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */
