@@ -489,7 +489,7 @@ body .carrouselTop {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid blue;
-  height: 400px;
+  height: 200px;
 }
 
 .titre-2-release .titre-2-release-text {
@@ -523,7 +523,7 @@ body .carrouselTop {
   width: 220px;
   height: 200px;
   margin-left: 40%;
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .container-button-release .button-release {
@@ -542,5 +542,38 @@ body .carrouselTop {
 
 .navbar img {
   width: 20px;
+  opacity: 0.7;
+}
+
+.navbar .navbar-brand {
+  color: #DB1A1A;
+  font-family: "Inter" ,sans serif;
+  margin-left: 20px;
+  padding-right: 10px;
+}
+
+.imghome img {
+  width: 25px;
+}
+
+.form-control {
+  border: none;
+}
+
+.form-form {
+  width: 400px;
+}
+
+.titre-1-release {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 100px;
+  letter-spacing: 5px;
+  line-height: 100px;
+  width: 400px;
 }
 /*# sourceMappingURL=style.css.map */

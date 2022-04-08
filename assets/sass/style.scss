@@ -444,7 +444,7 @@ max-width:100%;
   justify-content:space-between;
   //align-items: center;
   border:1px solid blue;
-  height:400px;
+  height:200px;
   
  
   .titre-2-release-text{
@@ -470,7 +470,7 @@ font-family: 'Inter',sans-serif;
   width:220px;
   height:200px; 
    margin-left:40%;
-   margin-top:300px;
+   margin-top:100px;
   .button-release{
     height:60px;
     width:100%;
@@ -484,8 +484,46 @@ font-family: 'Inter',sans-serif;
   }
 }
 .navbar{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+
   img{
     width:20px;
+    opacity:0.7;
   }
+  
+  
+  .navbar-brand{
+    color:#DB1A1A;
+    font-family:"Inter" ,sans serif;
+    margin-left:20px;
+    padding-right: 10px;
+  }
+
+}
+.imghome{
+  img{
+    width:25px;
+  }
+}
+.form-control{
+  border:none;
+ 
+}
+.form-form{
+  width:400px;
+}
+.titre-1-release{
+ display:flex;
+  border:1px solid red;
+  color:white;
+  font-family: "Inter", sans-serif;
+  font-size: 100px;
+  letter-spacing: 5px;
+  line-height: 100px;
+  width:400px;
+  
+  
+
+  
+  
 }
