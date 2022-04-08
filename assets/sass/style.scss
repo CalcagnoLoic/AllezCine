@@ -103,7 +103,7 @@ body{
   height: 48px;
   padding: 10px 20px;
   border-radius: 5px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(245, 233, 233, 0.932));
 }
 .start {
   
@@ -145,7 +145,7 @@ body{
 }
 .btnStartFree {
   @extend %btnE;
-  background-color: #fff;
+  background-color: #E5E5E5;;
   color: #DB1A1A;
 }
 .btnContact {
@@ -243,6 +243,13 @@ body{
   overflow: hidden;
   height: 100%;
 }
+// nav-header
+
+.myformSearch {
+  background: rgba(70, 70, 70, 0.47);
+  border-radius: 10px;
+  color: #A19F9F;
+}
 
 @media (max-width: 780px) {
   .start {
@@ -251,6 +258,7 @@ body{
     gap: 80px;
   }
   .sectionStart__left {
+    height: 100px;
     margin-left: 5px;
     margin-right: 5px;
     text-align: center;
@@ -280,12 +288,13 @@ body{
 }
 @media (max-width: 560px) {
   .start {
-    margin: 5px 5px;
+    margin: initial;
     padding-left: 50px;
     padding-right: 50px;
-    gap: 40px;
+    gap: 30px;
   }
   .sectionStart__left {
+    height: 60px;
     margin-bottom: 56px;
     h3 {
       font-weight: 700;
@@ -299,6 +308,7 @@ body{
     
     display: flex;
     flex-direction: column;
+    gap: 20px;
     justify-content: center;
     text-align: center;
     margin: 0 auto;

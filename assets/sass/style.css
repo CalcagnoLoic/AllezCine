@@ -98,12 +98,12 @@ body {
   height: 48px;
   padding: 10px 20px;
   border-radius: 5px;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(245, 233, 233, 0.932));
+          filter: drop-shadow(0px 4px 4px rgba(245, 233, 233, 0.932));
 }
 
 .start {
-  margin: 56px 120px;
+  margin: 56px 75px;
   background: #DB1A1A;
   color: #fff;
   padding-top: 75px;
@@ -157,7 +157,7 @@ body {
 }
 
 .btnStartFree {
-  background-color: #fff;
+  background-color: #E5E5E5;
   color: #DB1A1A;
 }
 
@@ -269,6 +269,12 @@ body {
   height: 100%;
 }
 
+.myformSearch {
+  background: rgba(70, 70, 70, 0.47);
+  border-radius: 10px;
+  color: #A19F9F;
+}
+
 @media (max-width: 780px) {
   .start {
     margin: 5px 5px;
@@ -276,6 +282,7 @@ body {
     gap: 80px;
   }
   .sectionStart__left {
+    height: 100px;
     margin-left: 5px;
     margin-right: 5px;
     text-align: center;
@@ -306,12 +313,13 @@ body {
 
 @media (max-width: 560px) {
   .start {
-    margin: 5px 5px;
+    margin: initial;
     padding-left: 50px;
     padding-right: 50px;
-    gap: 40px;
+    gap: 30px;
   }
   .sectionStart__left {
+    height: 60px;
     margin-bottom: 56px;
   }
   .sectionStart__left h3 {
@@ -329,6 +337,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
