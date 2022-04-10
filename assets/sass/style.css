@@ -12,19 +12,17 @@ body .carrouselTop {
   background-size: 91%;
   background-repeat: no-repeat;
   background-position: 50% 68%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #carrouselMain {
+  margin-left: 50px;
   width: 627px;
   height: 290px;
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
   margin-top: 80px;
   margin-bottom: 200px;
+  z-index: 0;
 }
 
 #carrouselMain .containerInfos {
@@ -488,7 +486,6 @@ body .carrouselTop {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid blue;
   height: 200px;
 }
 
@@ -499,7 +496,6 @@ body .carrouselTop {
   letter-spacing: 5px;
   line-height: 1.2;
   color: white;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,7 +506,6 @@ body .carrouselTop {
 }
 
 .container-button-release {
-  border: 1px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,12 +563,17 @@ body .carrouselTop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid red;
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: 5px;
-  line-height: 100px;
-  width: 400px;
+  line-height: 90px;
+  width: 300px;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.titre-1-release .movies-red {
+  color: #DB1A1A;
 }
 /*# sourceMappingURL=style.css.map */

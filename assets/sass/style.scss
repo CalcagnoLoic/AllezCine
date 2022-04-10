@@ -14,7 +14,11 @@ body{
     background-size: 91%;
     background-repeat: no-repeat;
     background-position: 50% 68%;
-    justify-content: center;
+   //justify-content: center;
+  
+ 
+    
+    
   }
 
 }
@@ -22,13 +26,16 @@ body{
 
 #carrouselMain
 {
+  margin-left:50px;
+  //margin-right:400px;
     width: 627px;
     height: 290px;
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    
     margin-top: 80px;
     margin-bottom: 200px;
+    z-index:0;
 
     .containerInfos
     {
@@ -443,7 +450,7 @@ max-width:100%;
   display:flex;
   justify-content:space-between;
   //align-items: center;
-  border:1px solid blue;
+
   height:200px;
   
  
@@ -454,7 +461,7 @@ text-align: right;
 letter-spacing: 5px;
 line-height: 1.2;
 color:white;
-border:1px solid red;
+
 display:flex;
 align-items: flex-end;
 font-family: 'Inter',sans-serif;
@@ -463,7 +470,7 @@ font-family: 'Inter',sans-serif;
 }
 
 .container-button-release{
-  border:1px solid green;
+
   display: flex;
   justify-content:center;
   align-items: center;
@@ -514,13 +521,20 @@ font-family: 'Inter',sans-serif;
 }
 .titre-1-release{
  display:flex;
-  border:1px solid red;
+
   color:white;
   font-family: "Inter", sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: 5px;
-  line-height: 100px;
-  width:400px;
+  line-height: 90px;
+  width:300px;
+  z-index:1;
+  margin-top:100px;
+ .movies-red{
+   color:#DB1A1A;
+ }
+  
+  
   
   
 
