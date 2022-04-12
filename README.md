@@ -21,7 +21,7 @@ Le but de ce projet est de réaliser un site sur lequel des films sont proposés
 
 Ce projet de groupe, d'une durée de 5 jours, est réalisé en collaboration avec [@Amoryne](https://github.com/Amoryne), [@Elena](https://github.com/TozurElena) et [@Nicolas](https://github.com/Kurner)
 
-[Mettre une photo du site]()
+![Site](assets/img/site.png)
 
 # Technologies mises en place
 
