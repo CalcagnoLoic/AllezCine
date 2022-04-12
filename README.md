@@ -37,6 +37,6 @@ Afin de mener à bien ce projet, différentes technologies ont été utilisées.
 
 # Lien du site
 
-[AllezCine](calcagnoloic.github.io/allezcine/)
+[AllezCine](https://calcagnoloic.github.io/AllezCine/)
 
 
