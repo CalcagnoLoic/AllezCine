@@ -73,9 +73,10 @@ dataFetch()
             img = document.createElement('img');
             img.className = "photo";
             img.src = 'https://image.tmdb.org/t/p/original' + posterCarrousel2[i];
-            img.style.width = '250px'
-            img.style.height = '285px'
-            containerCarrousel2.appendChild(img)
+            img.alt="poster du film";
+            img.style.width = '250px';
+            img.style.height = '285px';
+            containerCarrousel2.appendChild(img);
         }
 
         /**===========================================================

@@ -91,6 +91,7 @@ fetchData()
         {
             div = document.createElement('img');
             div.className = "photo";
+            div.alt="Poster du film";
             div.src = linkImg + poster[i];
             if(div.src == 'https://image.tmdb.org/t/p/originalnull')
             {
