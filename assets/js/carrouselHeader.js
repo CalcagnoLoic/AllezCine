@@ -95,7 +95,7 @@ fetchData()
             div.src = linkImg + poster[i];
             if(div.src == 'https://image.tmdb.org/t/p/originalnull')
             {
-                div.src = '../assets/img/ugly_doggy.png'
+                div.src = 'assets/img/ugly_doggy.png'
             }
             div.style.width = '627px';
             div.style.height = '290px';
